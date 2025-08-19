@@ -19,7 +19,7 @@ export default function Component() {
   const [formData, setFormData] = useState({
     fullName: "",
     phoneNumber: "",
-    fullAddress: "",
+    email: "",
     city: "",
     pinCode: "",
     adhaarNumber: "",
@@ -56,7 +56,7 @@ export default function Component() {
     setFormData({
       fullName: "",
       phoneNumber: "",
-      fullAddress: "",
+      email: "",
       city: "",
       pinCode: "",
       adhaarNumber: "",
@@ -195,15 +195,16 @@ export default function Component() {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="fullAddress" className="text-gray-700 font-medium text-sm">
-                          Full Address *
+                        <Label htmlFor="email" className="text-gray-700 font-medium text-sm">
+                          Email *
                         </Label>
-                        <Textarea
-                          id="fullAddress"
-                          value={formData.fullAddress}
-                          onChange={(e) => handleInputChange('fullAddress', e.target.value)}
-                          className="min-h-[100px] border-gray-200 bg-white rounded-lg resize-none focus:border-emerald-500 focus:ring-emerald-500 transition-all duration-200 hover:border-gray-300"
-                          placeholder="Enter your complete address"
+                        <Input
+                          id="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={(e) => handleInputChange('email', e.target.value)}
+                          className="h-12 border-gray-200 bg-white rounded-lg focus:border-emerald-500 focus:ring-emerald-500 transition-all duration-200 hover:border-gray-300"
+                          placeholder="Enter your email"
                           required
                         />
                       </div>
